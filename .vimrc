@@ -33,7 +33,6 @@ call plug#begin()
 call plug#end()
 
 " Копи/паст по Ctrl+C/Ctrl+V
-map <C-C> "+y
 vnoremap <C-C> "+y
 map <C-V> "+gp
 map <C-X> "+x
