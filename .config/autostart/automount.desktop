@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Automount sshfs
+GenericName=Automount sshfs
+Comment=auto mount in ~/sshfs remote hosts
+Exec=afuse-runner
+Terminal=false
+Type=Application
+StartupNotify=false
