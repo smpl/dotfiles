@@ -1,4 +1,4 @@
-*.dpi: 144 
+*.dpi: $DPI 
 *faceName:  xft:Terminus:style=Medium:size=10:antialias=false:hinting=trueft.autohint: 0
 
 Xft.lcdfilter:  lcddefault
