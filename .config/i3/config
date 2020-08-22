@@ -85,6 +85,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+$alt+Left move workspace to output left
 bindsym $mod+$alt+Right move workspace to output right
 
+bindsym $mod+Shift+grave move scratchpad
+bindsym $mod+grave scratchpad show
+
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -112,11 +115,10 @@ bar {
     status_command i3status
 }
 
-assign [class="Slack"] $ws10
-assign [class="Telegram"] $ws10
-assign [class="Mumble"] $ws10
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
 
 exec --no-startup-id dex -a -s ~/.config/autostart/
 exec --no-startup-id firefox
-exec --no-startup-id feh --bg-scale ~/.config/i3/1.jpg
+exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
 exec_always --no-startup-id.screenlayout/home.sh
