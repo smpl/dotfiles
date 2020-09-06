@@ -1,0 +1,16 @@
+DIR=~/.config/i3/
+FILE=~/.config/i3/config
+
+echo "# i3-config-generator" > $FILE
+
+if [ -f "${DIR}${HOSTNAME}.before.config" ]; then
+    cat ${DIR}${HOSTNAME}.before.config >> $FILE
+fi
+
+if [ -f "${DIR}base.config" ]; then
+    cat ${DIR}base.config >> $FILE
+fi
+
+if [ -f "${DIR}${HOSTNAME}.after.config" ]; then
+    cat ${DIR}${HOSTNAME}.after.config >> $FILE
+fi
