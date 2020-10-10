@@ -30,5 +30,5 @@ export LC_ALL=ru_RU.UTF-8
 export LANG=ru_RU.UTF-8
 export LANGUAGE="ru_RU.utf8"
 export TZ="Asia/Yekaterinburg"
-
+eval $(ssh-agent)
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
