@@ -14,7 +14,6 @@
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold yellow)%d%C(reset) - %C(white)%s%C(reset) %C(cyan)- %an%C(reset)%C(bold green)(%ar)%C(reset)' --all
     lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     lg = !"git lg1"
-    branch-prune = !git branch --merged | grep -v '\\*' | grep -v master | grep -v develop | grep -v staging | xargs -n 1 git branch -d
 [merge]
     tool = meld
 [diff]
